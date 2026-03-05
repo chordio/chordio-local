@@ -1,15 +1,13 @@
 {
   "name": "chordio-local",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Local prototype viewer for Chordio workbench",
   "bin": {
     "chordio-local": "./bin/cli.mjs"
   },
   "files": [
     ".next/standalone/",
-    ".next/static/",
-    "bin/",
-    "public/"
+    "bin/"
   ],
   "engines": {
     "node": ">=18"
