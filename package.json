@@ -1,12 +1,15 @@
 {
   "name": "@chordio/local",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Local prototype viewer for Chordio workbench",
   "bin": {
     "chordio-local": "./bin/cli.mjs"
   },
   "engines": {
     "node": ">=18"
+  },
+  "scripts": {
+    "postinstall": "bash scripts/postinstall.sh"
   },
   "dependencies": {
     "@ai-sdk/gateway": "^1.0.0",
