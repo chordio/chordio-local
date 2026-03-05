@@ -1,6 +1,6 @@
 {
   "name": "@chordio/local",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Local prototype viewer for Chordio workbench",
   "bin": {
     "chordio-local": "./bin/cli.mjs"
@@ -20,7 +20,7 @@
     "remotion:prepare": "tsx scripts/prepare-video.ts workbench demo-video",
     "preremotion:preview": "pnpm remotion:prepare",
     "remotion:preview": "remotion studio remotion/index.ts",
-    "clean:native": "rm -rf .next/standalone/node_modules/.pnpm/@esbuild+* .next/standalone/node_modules/.pnpm/@img+sharp-* .next/standalone/node_modules/.pnpm/@img+sharp-libvips-*",
+    "clean:native": "rm -rf .next/standalone/node_modules/.pnpm/@esbuild+* .next/standalone/node_modules/.pnpm/@img+sharp-* .next/standalone/node_modules/.pnpm/@img+sharp-libvips-* .next/standalone/node_modules/@esbuild .next/standalone/node_modules/esbuild .next/standalone/node_modules/.pnpm/esbuild@*",
     "prepublishOnly": "npm run build && npm run clean:native",
     "prepare-release": "bash scripts/prepare-release.sh"
   },

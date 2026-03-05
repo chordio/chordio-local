@@ -39,6 +39,17 @@ if (!fs.existsSync(serverPath)) {
   process.exit(1);
 }
 
+// Turbopack creates proxy modules (e.g. esbuild-<hash>) inside
+// .next/node_modules/ for external packages. These proxies call
+// require.resolve("esbuild") which needs to find the real esbuild
+// with its platform-specific native binary. Add the package's own
+// node_modules to NODE_PATH so resolution reaches the npm-installed copy.
+const existingNodePath = process.env.NODE_PATH || '';
+const extraNodePath = path.join(viewerRoot, 'node_modules');
+const nodePath = existingNodePath
+  ? `${extraNodePath}${path.delimiter}${existingNodePath}`
+  : extraNodePath;
+
 const child = spawn('node', [serverPath], {
   cwd: viewerRoot,
   stdio: 'inherit',
@@ -46,6 +57,7 @@ const child = spawn('node', [serverPath], {
     ...process.env,
     CHORDIO_PRODUCTS_DIR: productsDir,
     PORT: String(PORT),
+    NODE_PATH: nodePath,
   },
 });
 child.on('exit', (code) => process.exit(code ?? 0));
