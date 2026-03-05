@@ -1,0 +1,3 @@
+{
+  "/api/prototype-hash/[...path]/route": "app/api/prototype-hash/[...path]/route.js"
+}

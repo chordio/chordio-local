@@ -1,0 +1,228 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/assets/[...path]",
+      "regex": "^/api/assets/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpath": "nxtPpath"
+      },
+      "namedRegex": "^/api/assets/(?<nxtPpath>.+?)(?:/)?$"
+    },
+    {
+      "page": "/api/preview/[...path]",
+      "regex": "^/api/preview/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpath": "nxtPpath"
+      },
+      "namedRegex": "^/api/preview/(?<nxtPpath>.+?)(?:/)?$"
+    },
+    {
+      "page": "/api/prototype-files/[...path]",
+      "regex": "^/api/prototype\\-files/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpath": "nxtPpath"
+      },
+      "namedRegex": "^/api/prototype\\-files/(?<nxtPpath>.+?)(?:/)?$"
+    },
+    {
+      "page": "/api/prototype-hash/[...path]",
+      "regex": "^/api/prototype\\-hash/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpath": "nxtPpath"
+      },
+      "namedRegex": "^/api/prototype\\-hash/(?<nxtPpath>.+?)(?:/)?$"
+    },
+    {
+      "page": "/api/screenshots/[...path]",
+      "regex": "^/api/screenshots/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpath": "nxtPpath"
+      },
+      "namedRegex": "^/api/screenshots/(?<nxtPpath>.+?)(?:/)?$"
+    },
+    {
+      "page": "/api/videos/[...path]",
+      "regex": "^/api/videos/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpath": "nxtPpath"
+      },
+      "namedRegex": "^/api/videos/(?<nxtPpath>.+?)(?:/)?$"
+    },
+    {
+      "page": "/[product]",
+      "regex": "^/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPproduct": "nxtPproduct"
+      },
+      "namedRegex": "^/(?<nxtPproduct>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[product]/clones/[clone]",
+      "regex": "^/([^/]+?)/clones/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPproduct": "nxtPproduct",
+        "nxtPclone": "nxtPclone"
+      },
+      "namedRegex": "^/(?<nxtPproduct>[^/]+?)/clones/(?<nxtPclone>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[product]/clones/[clone]/canvas",
+      "regex": "^/([^/]+?)/clones/([^/]+?)/canvas(?:/)?$",
+      "routeKeys": {
+        "nxtPproduct": "nxtPproduct",
+        "nxtPclone": "nxtPclone"
+      },
+      "namedRegex": "^/(?<nxtPproduct>[^/]+?)/clones/(?<nxtPclone>[^/]+?)/canvas(?:/)?$"
+    },
+    {
+      "page": "/[product]/clones/[clone]/[state]",
+      "regex": "^/([^/]+?)/clones/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPproduct": "nxtPproduct",
+        "nxtPclone": "nxtPclone",
+        "nxtPstate": "nxtPstate"
+      },
+      "namedRegex": "^/(?<nxtPproduct>[^/]+?)/clones/(?<nxtPclone>[^/]+?)/(?<nxtPstate>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[product]/design-system",
+      "regex": "^/([^/]+?)/design\\-system(?:/)?$",
+      "routeKeys": {
+        "nxtPproduct": "nxtPproduct"
+      },
+      "namedRegex": "^/(?<nxtPproduct>[^/]+?)/design\\-system(?:/)?$"
+    },
+    {
+      "page": "/[product]/research/[doc]",
+      "regex": "^/([^/]+?)/research/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPproduct": "nxtPproduct",
+        "nxtPdoc": "nxtPdoc"
+      },
+      "namedRegex": "^/(?<nxtPproduct>[^/]+?)/research/(?<nxtPdoc>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[product]/[prototype]",
+      "regex": "^/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPproduct": "nxtPproduct",
+        "nxtPprototype": "nxtPprototype"
+      },
+      "namedRegex": "^/(?<nxtPproduct>[^/]+?)/(?<nxtPprototype>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[product]/[prototype]/canvas",
+      "regex": "^/([^/]+?)/([^/]+?)/canvas(?:/)?$",
+      "routeKeys": {
+        "nxtPproduct": "nxtPproduct",
+        "nxtPprototype": "nxtPprototype"
+      },
+      "namedRegex": "^/(?<nxtPproduct>[^/]+?)/(?<nxtPprototype>[^/]+?)/canvas(?:/)?$"
+    },
+    {
+      "page": "/[product]/[prototype]/story",
+      "regex": "^/([^/]+?)/([^/]+?)/story(?:/)?$",
+      "routeKeys": {
+        "nxtPproduct": "nxtPproduct",
+        "nxtPprototype": "nxtPprototype"
+      },
+      "namedRegex": "^/(?<nxtPproduct>[^/]+?)/(?<nxtPprototype>[^/]+?)/story(?:/)?$"
+    },
+    {
+      "page": "/[product]/[prototype]/video",
+      "regex": "^/([^/]+?)/([^/]+?)/video(?:/)?$",
+      "routeKeys": {
+        "nxtPproduct": "nxtPproduct",
+        "nxtPprototype": "nxtPprototype"
+      },
+      "namedRegex": "^/(?<nxtPproduct>[^/]+?)/(?<nxtPprototype>[^/]+?)/video(?:/)?$"
+    },
+    {
+      "page": "/[product]/[prototype]/[state]",
+      "regex": "^/([^/]+?)/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPproduct": "nxtPproduct",
+        "nxtPprototype": "nxtPprototype",
+        "nxtPstate": "nxtPstate"
+      },
+      "namedRegex": "^/(?<nxtPproduct>[^/]+?)/(?<nxtPprototype>[^/]+?)/(?<nxtPstate>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/reorder-variations",
+      "regex": "^/api/reorder\\-variations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/reorder\\-variations(?:/)?$"
+    },
+    {
+      "page": "/api/reveal",
+      "regex": "^/api/reveal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/reveal(?:/)?$"
+    },
+    {
+      "page": "/icon.svg",
+      "regex": "^/icon\\.svg(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/icon\\.svg(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
