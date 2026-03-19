@@ -296,10 +296,14 @@
     "serverExternalPackages": [
       "esbuild"
     ],
+    "transpilePackages": [
+      "@chordio/preview-builder"
+    ],
     "outputFileTracingExcludes": {
       "*": [
         "./node_modules/@esbuild/**",
-        "./node_modules/@img/**"
+        "./node_modules/@img/**",
+        "./node_modules/typescript/**"
       ]
     },
     "turbopack": {
